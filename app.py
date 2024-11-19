@@ -11,9 +11,18 @@ from PIL import ImageOps
 from io import BytesIO
 
 
-# In[8]:
+# In[10]:
 
 
+# Preamble
+st.title("Animal Classifier App")
+st.write("""
+This application uses a fine-tuned **ResNet-18** model to classify images into 10 different animal categories. 
+The model has been trained on a dataset of animal images, and it predicts with high confidence for known categories.
+""")
+
+# Display the animal categories
+st.subheader("Animal Categories")
 name_mapping = {
     'cavallo': 'horse',
     'pecora': 'sheep',
@@ -26,6 +35,10 @@ name_mapping = {
     'cane': 'dog',
     'farfalla': 'butterfly'
 }
+st.write(", ".join([f"**{v}**" for v in name_mapping.values()]))
+st.write("""
+Upload an image of an animal to see the classifier in action!
+""")
 
 
 # In[3]:
