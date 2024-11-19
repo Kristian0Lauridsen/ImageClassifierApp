@@ -4,7 +4,6 @@
 # In[1]:
 
 
-from ipywidgets import widgets
 from fastai.vision.widgets import *
 from types import SimpleNamespace
 from fastai.vision.core import PILImage
