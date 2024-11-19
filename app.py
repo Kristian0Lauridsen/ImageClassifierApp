@@ -31,26 +31,11 @@ name_mapping = {
 # In[3]:
 
 
-from contextlib import contextmanager
 import pathlib
 
-@contextmanager
-def set_posix_windows():
-    posix_backup = pathlib.PosixPath
-    try:
-        pathlib.PosixPath = pathlib.WindowsPath
-        yield
-    finally:
-        pathlib.PosixPath = posix_backup
+EXPORT_PATH = pathlib.Path("model3.pkl")  # Define the path to your model
 
-
-# In[4]:
-
-
-EXPORT_PATH = pathlib.Path("model3.pkl")
-
-with set_posix_windows():
-    learn_inf = load_learner(EXPORT_PATH)
+learn_inf = load_learner(EXPORT_PATH)  # Load the learner
 
 
 # In[9]:
