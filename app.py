@@ -4,11 +4,9 @@
 # In[1]:
 
 
-from fastai.vision.widgets import *
-from types import SimpleNamespace
+import streamlit as st
 from fastai.vision.core import PILImage
 from fastai.learner import load_learner
-import streamlit as st
 from PIL import ImageOps
 from io import BytesIO
 
@@ -28,7 +26,6 @@ name_mapping = {
     'cane': 'dog',
     'farfalla': 'butterfly'
 }
-
 
 
 # In[3]:
